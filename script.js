@@ -6,16 +6,29 @@ const image2 = document.getElementById("image2");
 const image3 = document.getElementById("image3");
 const textBox = document.getElementById("text-box");
 
+//Dark or Light images
+function imageMode(color) {
+  image1.src = `img/undraw_heartbroken_${color}.svg`;
+  image2.src = `img/undraw_starry_window_${color}.svg`;
+  image3.src = `img/undraw_walking_outside_${color}.svg`;
+}
+
 //Dark Mode Styles
 function darkMode() {
   nav.style.background = "rgb( 0 0 0 /50%)";
   textBox.style.backgroundColor = "rgb(255 255 255 / 50%)";
   toggleIcon.children[0].textContent = "Dark-Mode";
-  toggleIcon.children[1].classList.remove("fa-sun");
-  toggleIcon.children[1].classList.add("fa-moon");
-  image1.src = "img/undraw_heartbroken_dark.svg";
-  image2.src = "img/undraw_starry_window_dark.svg";
-  image3.src = "img/undraw_walking_outside_dark.svg";
+  toggleIcon.children[1].classList.replace("fa-sun", "fa-moon");
+  imageMode("dark");
+}
+
+//Dark Mode Styles
+function darkMode() {
+  nav.style.background = "rgb( 0 0 0 /50%)";
+  textBox.style.backgroundColor = "rgb(255 255 255 / 50%)";
+  toggleIcon.children[0].textContent = "Dark-Mode";
+  toggleIcon.children[1].classList.replace("fa-moon", "fa-sun");
+  imageMode("light");
 }
 
 //Light Mode Styles
