@@ -13,6 +13,9 @@ function darkMode() {
   toggleIcon.children[0].textContent = "Dark-Mode";
   toggleIcon.children[1].classList.remove("fa-sun");
   toggleIcon.children[1].classList.add("fa-moon");
+  image1.src = "img/undraw_heartbroken_dark.svg";
+  image2.src = "img/undraw_starry_window_dark.svg";
+  image3.src = "img/undraw_walking_outside_dark.svg";
 }
 
 //Switch Theme Dynamically
