@@ -8,18 +8,18 @@
   --primary-color: rgb(244, 132, 132);
   --primary-variant: #f55050;
   --secondary-color: #86a3b8;
-  --on-primary: rgb(250, 250, 250);
+  --on-primary: rgb(255, 255, 255);
   --on-background: rgb(66, 66, 66);
   --on-background-alt: rgba(66, 66, 66, 0.7);
-  --background: rgb(255, 255, 255);
+  --background: rgb(232, 210, 166, 0.7);
   --box-shadow: 0 5px 20px 1px rgba(0, 0, 0, 0.5);
 }
 
 [data-theme="dark"] {
-  --primary-color: rgb(63, 46, 62);
+  --primary-color: rgb(83, 62, 82);
   --primary-variant: #efe1d1;
   --secondary-color: #a78295;
-  --on-primary: #000;
+  --on-primary: rgb(239, 225, 209);
   --on-background: rgba(255, 255, 255, 0.9);
   --on-background-alt: rgba(255, 255, 255, 0.7);
   --background: #121212;
