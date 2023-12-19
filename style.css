@@ -16,10 +16,10 @@
 }
 
 [data-theme="dark"] {
-  --primary-color: rgb(63, 46, 62);
+  --primary-color: rgb(83, 62, 82);
   --primary-variant: #efe1d1;
   --secondary-color: #a78295;
-  --on-primary: #000;
+  --on-primary: #efe1d1;
   --on-background: rgba(255, 255, 255, 0.9);
   --on-background-alt: rgba(255, 255, 255, 0.7);
   --background: #121212;
