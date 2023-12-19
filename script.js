@@ -27,7 +27,7 @@ function lightMode() {
   nav.style.background = "rgb(255 255 255 / 50%)";
   textBox.style.backgroundColor = "rgb( 0 0 0 /50%)";
   toggleIcon.children[0].textContent = "Light-Mode";
-  toggleIcon.children[1].classList.replace("fa-moon", "fa-sin");
+  toggleIcon.children[1].classList.replace("fa-moon", "fa-sun");
   imageMode("light");
 }
 
@@ -35,12 +35,26 @@ function lightMode() {
 function switchTheme(event) {
   if (event.target.checked) {
     document.documentElement.setAttribute("data-theme", "dark");
+    localStorage.setItem("theme", "dark");
     darkMode();
   } else {
     document.documentElement.setAttribute("data-theme", "light");
+    localStorage.setItem("theme", "light");
     lightMode();
   }
 }
 
 //Event Listener
 toggleSwitch.addEventListener("change", switchTheme);
+
+//Check local Storage for Theme
+const currentTheme = localStorage.getItem("theme");
+console.log(currentTheme);
+if (currentTheme) {
+  document.documentElement.setAttribute("data-theme", currentTheme);
+
+  if (currentTheme === "dark") {
+    toggleSwitch.checked = true;
+    darkMode();
+  }
+}
